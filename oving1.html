@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body onclick="vise()">
+<button onclick="gass()"> Gass Volvo </button>
+<button onclick="brems()">Brems Volvo</button>
+<br> </br>
+
+<button onclick="gass1()"> Gass Ferrari </button>
+<button onclick="brems1()">Brems Ferrari</button>
+<br> </br>
+<button onclick="gass2()"> Gass Lada </button>
+<button onclick="brems2()">Brems Lada</button>
+    <br></br>
+    <div id="utskrift"> </div>
+
+
+
+    <script>
+    class Bil {
+      constructor(registreringsnr, merke, aarsmodell, hastighet){
+        this.registreringsnr = registreringsnr;
+        this.merke = merke;
+        this.aarsmodell = aarsmodell;
+        this.hastighet = hastighet;
+      }
+      }
+        let volvo = new Bil(123213, "Volvo", 1990, 0);
+        let ferrari = new Bil(654623, "Ferrai", 1998, 0);
+        let lada = new Bil(894134, "Lada", 2090, 0);
+
+        function gass(){
+          volvo.hastighet = volvo.hastighet + 10;
+
+
+        }
+
+        function brems(){
+          if (volvo.hastighet != 0) {
+        volvo.hastighet = volvo.hastighet - 10;
+          }
+
+        }
+
+        function gass1(){
+          ferrari.hastighet = ferrari.hastighet + 10;
+
+
+        }
+
+        function brems1(){
+          if (ferrari.hastighet != 0) {
+          ferrari.hastighet = ferrari.hastighet - 10;
+          }
+
+        }
+
+
+        function gass2(){
+          lada.hastighet = lada.hastighet + 10;
+
+
+        }
+
+        function brems2(){
+          if (lada.hastighet != 0) {
+            lada.hastighet = lada.hastighet - 10;
+          }
+
+        }
+
+
+        function vise() {
+                document.getElementById("utskrift").innerHTML =
+                volvo.merke + " " + volvo.hastighet + "<br>" +
+                ferrari.merke + " " + ferrari.hastighet + "<br>" +
+                lada.merke + " " + lada.hastighet
+
+
+        }
+
+    </script>
+  </body>
+</html>

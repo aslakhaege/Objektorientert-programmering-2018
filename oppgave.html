@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+<body onclick="utskrift()">
+  <button onclick="gass()"> Gass Volvo </button>
+  <button onclick="brems()">Brems Volvo</button>
+  <br> </br>
+
+  <button onclick="gass1()"> Gass Ferrari </button>
+  <button onclick="brems1()">Brems Ferrari</button>
+  <br> </br>
+  <button onclick="gass2()"> Gass Lada </button>
+  <button onclick="brems2()">Brems Lada</button>
+      <br></br>
+
+
+
+
+  <div id="utdata"></div>
+<script>
+//Oppgave 1
+class Bil {
+  constructor(registreringsnr, merke, arsmodell, hastighet) {
+    this.registreringsnr = registreringsnr;
+    this.merke = merke;
+    this.arsmodell = arsmodell;
+    this.hastighet = hastighet;
+  }
+}
+//Oppgave 3
+function gass() {
+  let fart1 = this.hastighet += 10;
+}
+
+function brems() {
+  let fart2 = this.hastighet - 10;
+}
+
+function functionName() {
+
+}
+
+
+
+//Oppgave 2-Objekter
+let b = new Bil(registreringsnr, merke, arsmodell, hastighet);
+
+let ferrari = new Bil(343434, "Ferrari", 2004, 320);
+let golf = new Bil(245388, "Volkswagen", 2009, 180);
+let octavia = new Bil(58923, "Skoda", 2011, 190);
+
+
+</script>
+
+
+
+</body>
+</html>
